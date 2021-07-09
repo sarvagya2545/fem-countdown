@@ -1,20 +1,32 @@
+.timer {
+    @include flex($dir: column, $justify: center, $align: center);
+
+    &__label {
+        margin-top: 20px;
+    }
+}
+
 .flip {
 	position: relative;
-	height: 15rem;
-	width: 15rem;
-
+	height: $card-size;
+	width: $card-size;
+    
 	&__card {
         // card design
-		height: 15rem;
-		width: 15rem;
+		height: $card-size;
+		width: $card-size;
 		background-color: $color-dark-desaturated-blue;
 		color: $color-primary-soft-red;
-		font-size: 8rem;
+        @if $card-size - 7rem > $fallback-min-font-size {
+            font-size: calc(#{$card-size} - 7rem);
+        } @else {
+            font-size: $fallback-min-font-size;
+        }
 		position: absolute;
-		border-radius: 15px;
-
+		border-radius: 10px;
+        
         // card layout
-        @include flex(row, center, center);
+        @include flex($dir: row, $justify: center, $align: center);
 
         // card animation
         transform-style: preserve-3d;
@@ -26,7 +38,7 @@
         filter: brightness(80%);
     }
 
-    /**** CLIP PATH ****/
+    /**** CLIP PATH FOR STYLING THE CARD ****/
     &__card--prev:not(&__card--top) {
         @include clipPathPolygon(bottom);
     }
@@ -37,6 +49,7 @@
     
     &__card--next:not(&__card--bottom) {
         @include clipPathPolygon(top);
+        // add transform state initially
         transform: rotateX(180deg);
     }
 
@@ -45,13 +58,26 @@
     }
 
     /**** ANIMATED STATES ****/
-	&:hover &__card--prev:not(&__card--top) {
+	&.animate &__card--prev:not(&__card--top) {
         transition: transform 1s ease;
 		transform: rotateX(180deg);
 	}
 
-    &:hover &__card--next:not(&__card--bottom) {
+    &.animate &__card--next:not(&__card--bottom) {
         transition: transform 1s ease;
 		transform: rotateX(0deg);
 	}
+}
+
+.social {
+    font-size: 3rem;
+
+    &__icon {
+        color: $color-primary-grayish-blue;
+    
+        &:hover {
+            cursor: pointer;
+            color: $color-primary-soft-red;
+        }
+    }
 }

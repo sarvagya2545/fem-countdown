@@ -2,14 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
 
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- FONTAWESOME SCRIPTS -->
+  <script src="https://kit.fontawesome.com/9a34e91c28.js" crossorigin="anonymous"></script>
+
+  <!-- SCRIPTS -->
+  <script src="/js/script.js" defer></script>
   
   <title>Frontend Mentor | Launch countdown timer</title>
 </head>
@@ -29,9 +39,54 @@
           <div class="flip__card flip__card--next flip__card--top">23</div>
         </div>
   
-        <p>Days</p>
+        <p class="timer__label">Days</p>
       </div>
 
+      <div class="timer">
+        <div class="flip">
+          <div class="flip__card flip__card--next flip__card--bottom">23</div>
+          <div class="flip__card flip__card--prev flip__card--bottom">22</div>
+          <div class="flip__card flip__card--prev flip__card--top">22</div>
+          <div class="flip__card flip__card--next flip__card--top">23</div>
+        </div>
+  
+        <p class="timer__label">Hours</p>
+      </div>
+
+      <div class="timer">
+        <div class="flip">
+          <div class="flip__card flip__card--next flip__card--bottom">23</div>
+          <div class="flip__card flip__card--prev flip__card--bottom">22</div>
+          <div class="flip__card flip__card--prev flip__card--top">22</div>
+          <div class="flip__card flip__card--next flip__card--top">23</div>
+        </div>
+  
+        <p class="timer__label">Minutes</p>
+      </div>
+
+      <div class="timer">
+        <div class="flip">
+          <div class="flip__card flip__card--next flip__card--bottom">23</div>
+          <div class="flip__card flip__card--prev flip__card--bottom">22</div>
+          <div class="flip__card flip__card--prev flip__card--top">22</div>
+          <div class="flip__card flip__card--next flip__card--top">23</div>
+        </div>
+  
+        <p class="timer__label">Seconds</p>
+      </div>
+
+    </section>
+
+    <section class="social">
+      <div class="social__icon social--fb">
+        <i class="fab fa-facebook-square"></i>
+      </div>
+      <div class="social__icon social--pin">
+        <i class="fab fa-pinterest"></i>
+      </div>
+      <div class="social__icon social--insta">
+        <i class="fab fa-instagram"></i>
+      </div>
     </section>
 
   </main>

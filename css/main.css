@@ -11,6 +11,7 @@ html {
 
 /*********      COLORS       **********/
 /*********      FONTS       **********/
+/*********      SIZES       **********/
 body {
   font-family: "Red Hat Text", sans-serif;
   font-size: 1.6rem;
@@ -22,6 +23,12 @@ body {
   letter-spacing: 6px;
   font-weight: 700;
   font-size: 2.8rem;
+}
+
+.timer__label {
+  text-transform: uppercase;
+  color: #8486a9;
+  letter-spacing: 6px;
 }
 
 /*************     FLEXBOX MIXIN      *************/
@@ -49,12 +56,71 @@ body {
           align-items: center;
 }
 
+.main__heading {
+  margin: 80px 0;
+}
+
+.timers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-top: 25rem;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timer__label {
+  margin-top: 20px;
+}
+
 .flip {
   position: relative;
   height: 15rem;
   width: 15rem;
   /**** STYLING DIFFERENT CARDS ****/
-  /**** CLIP PATH ****/
+  /**** CLIP PATH FOR STYLING THE CARD ****/
   /**** ANIMATED STATES ****/
 }
 
@@ -63,9 +129,9 @@ body {
   width: 15rem;
   background-color: #343650;
   color: #fb6087;
-  font-size: 8rem;
+  font-size: calc(15rem - 7rem);
   position: absolute;
-  border-radius: 15px;
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,7 +178,7 @@ body {
           clip-path: polygon(0 calc(50% + 5%), 5% 50%, calc(100% - 5%) 50%, 100% calc(50% + 5%), 100% 100%, 0 100%);
 }
 
-.flip:hover .flip__card--prev:not(.flip__card--top) {
+.flip.animate .flip__card--prev:not(.flip__card--top) {
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
@@ -121,12 +187,25 @@ body {
           transform: rotateX(180deg);
 }
 
-.flip:hover .flip__card--next:not(.flip__card--bottom) {
+.flip.animate .flip__card--next:not(.flip__card--bottom) {
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
+}
+
+.social {
+  font-size: 3rem;
+}
+
+.social__icon {
+  color: #8486a9;
+}
+
+.social__icon:hover {
+  cursor: pointer;
+  color: #fb6087;
 }
 /*# sourceMappingURL=main.css.map */

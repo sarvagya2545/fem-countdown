@@ -1,0 +1,34 @@
+/*************     FLEXBOX MIXIN      *************/
+@mixin flex($dir: row, $align: stretch, $justify: flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+/*************     CLIP PATH MIXIN      *************/
+@mixin clipPathPolygon($part) {
+    $cut-width: 5%;
+
+    @if $part == top {
+        clip-path: polygon(
+            100% 0, 
+            100% calc(50% - #{$cut-width}), 
+            calc(100% - #{$cut-width}) 50%, 
+            $cut-width 50%, 
+            0 calc(50% - #{$cut-width}), 
+            0 0
+        );
+    }
+
+    @if $part == bottom {
+        clip-path: polygon(
+            0 calc(50% + #{$cut-width}),
+            $cut-width 50%, 
+            calc(100% - #{$cut-width}) 50%, 
+            100% calc(50% + #{$cut-width}), 
+            100% 100%, 
+            0 100%
+        );
+    }
+}

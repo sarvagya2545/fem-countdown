@@ -1,7 +1,9 @@
-main {
+.main {
+    // size of main container
     width: 100vw;
     height: 100vh;
 
+    // background formatting
     background-image: 
         url('/images/pattern-hills.svg'),
         url('/images/bg-stars.svg')
@@ -9,5 +11,9 @@ main {
 
     background-repeat: no-repeat;
     background-origin: content-box;
-    background-position-y: bottom, top;
+    background-position: bottom, top;
+    background-color: $color-very-dark-blue;
+
+    // content layout
+    @include flex($dir: column, $align: center, $justify: center);
 }

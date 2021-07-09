@@ -1,0 +1,12 @@
+body {
+    font-family: $font-family-main, $font-family-fallback;
+    font-size: $font-size-body;
+}
+
+.main__heading {
+    color: $color-neutral-white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-size: 2.8rem;
+}

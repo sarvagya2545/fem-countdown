@@ -9,17 +9,124 @@ html {
   font-size: 62.5%;
 }
 
+/*********      COLORS       **********/
+/*********      FONTS       **********/
 body {
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: "Red Hat Text", sans-serif;
   font-size: 1.6rem;
 }
 
-main {
+.main__heading {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+/*************     FLEXBOX MIXIN      *************/
+/*************     CLIP PATH MIXIN      *************/
+.main {
   width: 100vw;
   height: 100vh;
   background-image: url("/images/pattern-hills.svg"), url("/images/bg-stars.svg");
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-position-y: bottom, top;
+  background-position: bottom, top;
+  background-color: #1e1f29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flip {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+  /**** STYLING DIFFERENT CARDS ****/
+  /**** CLIP PATH ****/
+  /**** ANIMATED STATES ****/
+}
+
+.flip__card {
+  height: 15rem;
+  width: 15rem;
+  background-color: #343650;
+  color: #fb6087;
+  font-size: 8rem;
+  position: absolute;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.flip__card--top {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.flip__card--prev:not(.flip__card--top) {
+  -webkit-clip-path: polygon(0 calc(50% + 5%), 5% 50%, calc(100% - 5%) 50%, 100% calc(50% + 5%), 100% 100%, 0 100%);
+          clip-path: polygon(0 calc(50% + 5%), 5% 50%, calc(100% - 5%) 50%, 100% calc(50% + 5%), 100% 100%, 0 100%);
+}
+
+.flip__card--prev:not(.flip__card--bottom) {
+  -webkit-clip-path: polygon(100% 0, 100% calc(50% - 5%), calc(100% - 5%) 50%, 5% 50%, 0 calc(50% - 5%), 0 0);
+          clip-path: polygon(100% 0, 100% calc(50% - 5%), calc(100% - 5%) 50%, 5% 50%, 0 calc(50% - 5%), 0 0);
+}
+
+.flip__card--next:not(.flip__card--bottom) {
+  -webkit-clip-path: polygon(100% 0, 100% calc(50% - 5%), calc(100% - 5%) 50%, 5% 50%, 0 calc(50% - 5%), 0 0);
+          clip-path: polygon(100% 0, 100% calc(50% - 5%), calc(100% - 5%) 50%, 5% 50%, 0 calc(50% - 5%), 0 0);
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.flip__card--next:not(.flip__card--top) {
+  -webkit-clip-path: polygon(0 calc(50% + 5%), 5% 50%, calc(100% - 5%) 50%, 100% calc(50% + 5%), 100% 100%, 0 100%);
+          clip-path: polygon(0 calc(50% + 5%), 5% 50%, calc(100% - 5%) 50%, 100% calc(50% + 5%), 100% 100%, 0 100%);
+}
+
+.flip:hover .flip__card--prev:not(.flip__card--top) {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.flip:hover .flip__card--next:not(.flip__card--bottom) {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
 }
 /*# sourceMappingURL=main.css.map */

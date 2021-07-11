@@ -59,12 +59,12 @@
 
     /**** ANIMATED STATES ****/
 	&.animate &__card--prev:not(&__card--top) {
-        transition: transform 1s ease;
+        transition: transform $card-flip-transition-time ease;
 		transform: rotateX(180deg);
 	}
 
     &.animate &__card--next:not(&__card--bottom) {
-        transition: transform 1s ease;
+        transition: transform $card-flip-transition-time ease;
 		transform: rotateX(0deg);
 	}
 }

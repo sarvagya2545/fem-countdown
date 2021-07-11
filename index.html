@@ -19,7 +19,8 @@
   <script src="https://kit.fontawesome.com/9a34e91c28.js" crossorigin="anonymous"></script>
 
   <!-- SCRIPTS -->
-  <script src="/js/script.js" defer></script>
+  <script src="/js/script.js" type="module" defer></script>
+  <script src="/js/timer.js" type="module" defer></script>
   
   <title>Frontend Mentor | Launch countdown timer</title>
 </head>
@@ -32,44 +33,44 @@
     <section class="timers">
 
       <div class="timer">
-        <div class="flip">
-          <div class="flip__card flip__card--next flip__card--bottom">23</div>
-          <div class="flip__card flip__card--prev flip__card--bottom">22</div>
-          <div class="flip__card flip__card--prev flip__card--top">22</div>
-          <div class="flip__card flip__card--next flip__card--top">23</div>
+        <div class="flip" data-type="days">
+          <div class="flip__card flip__card--next flip__card--bottom">1</div>
+          <div class="flip__card flip__card--prev flip__card--bottom">0</div>
+          <div class="flip__card flip__card--prev flip__card--top">0</div>
+          <div class="flip__card flip__card--next flip__card--top">1</div>
         </div>
   
         <p class="timer__label">Days</p>
       </div>
 
       <div class="timer">
-        <div class="flip">
-          <div class="flip__card flip__card--next flip__card--bottom">23</div>
-          <div class="flip__card flip__card--prev flip__card--bottom">22</div>
-          <div class="flip__card flip__card--prev flip__card--top">22</div>
-          <div class="flip__card flip__card--next flip__card--top">23</div>
+        <div class="flip" data-type="hours">
+          <div class="flip__card flip__card--next flip__card--bottom">1</div>
+          <div class="flip__card flip__card--prev flip__card--bottom">0</div>
+          <div class="flip__card flip__card--prev flip__card--top">0</div>
+          <div class="flip__card flip__card--next flip__card--top">1</div>
         </div>
   
         <p class="timer__label">Hours</p>
       </div>
 
       <div class="timer">
-        <div class="flip">
-          <div class="flip__card flip__card--next flip__card--bottom">23</div>
-          <div class="flip__card flip__card--prev flip__card--bottom">22</div>
-          <div class="flip__card flip__card--prev flip__card--top">22</div>
-          <div class="flip__card flip__card--next flip__card--top">23</div>
+        <div class="flip" data-type="minutes">
+          <div class="flip__card flip__card--next flip__card--bottom">1</div>
+          <div class="flip__card flip__card--prev flip__card--bottom">0</div>
+          <div class="flip__card flip__card--prev flip__card--top">0</div>
+          <div class="flip__card flip__card--next flip__card--top">1</div>
         </div>
   
         <p class="timer__label">Minutes</p>
       </div>
 
       <div class="timer">
-        <div class="flip">
-          <div class="flip__card flip__card--next flip__card--bottom">23</div>
-          <div class="flip__card flip__card--prev flip__card--bottom">22</div>
-          <div class="flip__card flip__card--prev flip__card--top">22</div>
-          <div class="flip__card flip__card--next flip__card--top">23</div>
+        <div class="flip" data-type="seconds">
+          <div class="flip__card flip__card--next flip__card--bottom">1</div>
+          <div class="flip__card flip__card--prev flip__card--bottom">0</div>
+          <div class="flip__card flip__card--prev flip__card--top">0</div>
+          <div class="flip__card flip__card--next flip__card--top">1</div>
         </div>
   
         <p class="timer__label">Seconds</p>

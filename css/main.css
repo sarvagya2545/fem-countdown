@@ -12,6 +12,7 @@ html {
 /*********      COLORS       **********/
 /*********      FONTS       **********/
 /*********      SIZES       **********/
+/*********      TIME       **********/
 body {
   font-family: "Red Hat Text", sans-serif;
   font-size: 1.6rem;
@@ -179,19 +180,19 @@ body {
 }
 
 .flip.animate .flip__card--prev:not(.flip__card--top) {
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
 }
 
 .flip.animate .flip__card--next:not(.flip__card--bottom) {
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
 }

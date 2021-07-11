@@ -1,5 +1,8 @@
-const timers = document.querySelectorAll('.timer .flip');
+import Timer from "./timer.js";
 
-setInterval(() => {
-    timers.forEach(flipCard => flipCard.classList.toggle('animate'));
-}, 1000);
+const launchDate = new Date().getTime() + 14 * 24 * 60 * 60 * 1000
+new Timer(launchDate);
+
+// timers.forEach(timer => {
+
+// })

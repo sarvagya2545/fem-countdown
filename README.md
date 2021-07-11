@@ -32,6 +32,10 @@ Users should be able to:
 
 
 
+https://user-images.githubusercontent.com/59908012/125209593-77b25300-e2b7-11eb-8fc4-c41253452ddc.mov
+
+
+
 ### Links
 
 - Solution URL: [On frontendmentor](https://www.frontendmentor.io/solutions/flip-animation-implemented-d-Mn0XhC9mq)
